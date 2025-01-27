@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Surya/Documents/DS-Projects/mlops-tutorial-project/mlruns/245535393562919502/37fdddb549e84f11a9e5e79109ffff38/artifacts
+end_time: 1737953215031
+entry_point_name: ''
+experiment_id: '245535393562919502'
+lifecycle_stage: active
+run_id: 37fdddb549e84f11a9e5e79109ffff38
+run_name: tasteful-grub-765
+run_uuid: 37fdddb549e84f11a9e5e79109ffff38
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737953203291
+status: 3
+tags: []
+user_id: Surya
