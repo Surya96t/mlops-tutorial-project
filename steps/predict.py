@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, classification_report, roc_auc_score
 class Predictor: 
     def __init__(self):
         self.model_path = self.load_config()['model']['store_path']
-        self.model = self.load_model()  
+        self.pipeline = self.load_model() 
         
         
     def load_config(self):
