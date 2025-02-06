@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1738820026461
+current_stage: None
+description: null
+last_updated_timestamp: 1738820026461
+name: insurance_model
+run_id: 9a55a5ce58c64de5ba2e2908ee0dfe8d
+run_link: null
+source: file:///C:/Users/Surya/Documents/DS-Projects/mlops-tutorial-project/mlruns/789804433509515986/9a55a5ce58c64de5ba2e2908ee0dfe8d/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/Surya/Documents/DS-Projects/mlops-tutorial-project/mlruns/789804433509515986/9a55a5ce58c64de5ba2e2908ee0dfe8d/artifacts/model
+user_id: null
+version: 4
