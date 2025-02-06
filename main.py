@@ -1,4 +1,4 @@
-import logging
+from logger_config import get_logger
 import yaml
 import mlflow
 import mlflow.sklearn
@@ -11,33 +11,32 @@ from sklearn.metrics import classification_report
 
 
 # Set up logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
-
+logger = get_logger()
 
 def main():
     # Load data
     ingestion = Ingestion()
     train, test = ingestion.load_data()
-    logging.info("Data ingestion completed successfully.")
+    logger.info("Data ingestion completed successfully.")
     
     # Clean data
     cleaner = Cleaner()
     train_data = cleaner.clean_data(train)
     test_data = cleaner.clean_data(test)
-    logging.info("Data cleaning completed successfully")
+    logger.info("Data cleaning completed successfully")
     
     # Prepare and train model
     trainer = Trainer()
     X_train, y_train = trainer.feature_target_separator(train_data)
     trainer.train_model(X_train, y_train)
     trainer.save_model()
-    logging.info("Model training completed successfully")
+    logger.info("Model training completed successfully")
     
     # Evaluate model
     predictor = Predictor()
     X_test, y_test = predictor.feature_target_separator(test_data)
     accuracy, class_report, roc_auc_score = predictor.evaluate_model(X_test, y_test)
-    logging.info("Model evaluation completed successfully")
+    logger.info("Model evaluation completed successfully")
     
     
     # Print evaluation results
@@ -52,33 +51,33 @@ def train_with_mlflow():
     with open('config.yml') as file:
         config = yaml.safe_load(file)
         
-    mlflow.set_experiment("Model Training Experiment 2")    
+    mlflow.set_experiment("Logging Experiment")    
     
     with mlflow.start_run() as run:
         # Load data
         ingestion = Ingestion()
         train, test = ingestion.load_data()
-        logging.info("Data ingestion completed successfully.")
+        logger.info("Data ingestion completed successfully.")
         
         # Clean data
         cleaner = Cleaner()
         train_data = cleaner.clean_data(train)
         test_data = cleaner.clean_data(test)
-        logging.info("Data cleaning completed successfully")
+        logger.info("Data cleaning completed successfully")
         
         # Prepare and train model
         trainer = Trainer()
         X_train, y_train = trainer.feature_target_separator(train_data)
         trainer.train_model(X_train, y_train)
         trainer.save_model()
-        logging.info("Model training completed successfully")
+        logger.info("Model training completed successfully")
         
         # Evaluate model
         predictor = Predictor()
         X_test, y_test = predictor.feature_target_separator(test_data)
         accuracy, class_report, roc_auc_score = predictor.evaluate_model(X_test, y_test)
         report = classification_report(y_test, trainer.pipeline.predict(X_test), output_dict=True)
-        logging.info("Model evaluation completed successfully")
+        logger.info("Model evaluation completed successfully")
         
         # Tags 
         mlflow.set_tag('Model Developer', 'Surya Prakash')
@@ -99,7 +98,7 @@ def train_with_mlflow():
         model_uri = f"runs:/{run.info.run_id}/model"
         mlflow.register_model(model_uri, model_name)
         
-        logging.info("MLflow tracking completed successfully")
+        logger.info("MLflow tracking completed successfully")
         
         # Log evaluation results
         mlflow.log_text(class_report, "class_report")

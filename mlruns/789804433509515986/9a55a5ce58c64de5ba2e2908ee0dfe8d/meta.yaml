@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Surya/Documents/DS-Projects/mlops-tutorial-project/mlruns/789804433509515986/9a55a5ce58c64de5ba2e2908ee0dfe8d/artifacts
+end_time: 1738820026491
+entry_point_name: ''
+experiment_id: '789804433509515986'
+lifecycle_stage: active
+run_id: 9a55a5ce58c64de5ba2e2908ee0dfe8d
+run_name: dapper-newt-450
+run_uuid: 9a55a5ce58c64de5ba2e2908ee0dfe8d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738820009416
+status: 3
+tags: []
+user_id: Surya

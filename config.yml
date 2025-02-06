@@ -7,7 +7,7 @@ train:
   random_state: 42
   shuffle: true
 
-# model:
+model:
 #   name: DecisionTreeClassifier
 #   params:
 #     criterion: entropy

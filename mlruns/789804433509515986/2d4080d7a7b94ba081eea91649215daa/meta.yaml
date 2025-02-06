@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Surya/Documents/DS-Projects/mlops-tutorial-project/mlruns/789804433509515986/2d4080d7a7b94ba081eea91649215daa/artifacts
+end_time: 1738819957878
+entry_point_name: ''
+experiment_id: '789804433509515986'
+lifecycle_stage: active
+run_id: 2d4080d7a7b94ba081eea91649215daa
+run_name: dazzling-goose-689
+run_uuid: 2d4080d7a7b94ba081eea91649215daa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738819957255
+status: 4
+tags: []
+user_id: Surya
