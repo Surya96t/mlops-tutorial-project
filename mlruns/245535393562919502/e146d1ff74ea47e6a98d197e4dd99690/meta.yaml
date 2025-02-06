@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Surya/Documents/DS-Projects/mlops-tutorial-project/mlruns/245535393562919502/e146d1ff74ea47e6a98d197e4dd99690/artifacts
+end_time: 1738541343381
+entry_point_name: ''
+experiment_id: '245535393562919502'
+lifecycle_stage: active
+run_id: e146d1ff74ea47e6a98d197e4dd99690
+run_name: righteous-bee-135
+run_uuid: e146d1ff74ea47e6a98d197e4dd99690
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738541325558
+status: 3
+tags: []
+user_id: Surya
